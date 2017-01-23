@@ -1,0 +1,120 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #3e3e3e;
+  z-index:-2;
+}
+.corp{  position: relative;width: 500px;
+  height: 500px;margin: 50px auto;}
+.body{
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background:white;
+  border-radius:50%;
+  z-index:2;
+  &.un {
+    top: 30%;
+    left: 0%;
+  }
+  &.deux {
+    top: 30%;
+    left: 10%;
+  }
+  &.trois {
+    top: 30%;
+    left: 20%;
+  }
+
+}
+.head{
+    display:inline-block;
+    width:5em;
+    height:5em;
+    border-radius:100%;
+    background:black;
+    vertical-align:middle;
+    position:absolute;
+    top:25%;
+    left:35%;
+    transform:rotate(30deg);
+  z-index:3;
+    &:before{
+        content:'';
+        display:inline-block;
+        width:80%;
+        height:50%;
+        background:black;
+        position:absolute;
+        bottom:0;
+        right:-10%;
+        border-radius:50% 40%;
+      }
+    &:hover{
+          .ear{
+              &.one,&.two{transform:rotate(0deg);}
+          }
+        }
+    .eye{
+      display:inline-block;
+      width:1em;
+      height:1em;
+      border-radius:100%;
+      background:white;
+      position:absolute;
+      overflow:hidden;
+      &:before{
+          content:'';
+          display:inline-block;
+          background:black;
+          width:50%;
+          height:50%;
+          border-radius:100%;
+          position:absolute;
+          right:10%;
+          bottom:10%;
+          transition:all 0.3s;
+        }
+      &.one{
+        right:-2%;
+        top:1.7em;
+      }
+      &.two{
+        right:2.5em;
+        top:1.7em;
+      }
+    }
+    .ear{
+        background:black;
+        width:50%;
+        height:30%;
+        border-radius:100%;
+        position:absolute;
+        &.one{
+          left:-10%;
+          top:5%;
+          transform:rotate(-30deg);
+        }
+        &.two{
+          top:2%;
+          right:-5%;
+          transform:rotate(20deg);
+        }
+      }
+  }
+
+  .legs{
+    display:inline-block;
+    position:absolute;
+    top:50%;
+    left:10%;
+    z-index:1;
+    .leg{
+      display:inline-block;
+      background:darken(black,5%);
+      width:0.5em;
+      height:4.5em;
+      margin:0.6em;
+    }
+  }
